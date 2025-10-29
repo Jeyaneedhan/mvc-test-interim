@@ -1,0 +1,415 @@
+/* Page-Specific Styles for Agreements, Payments, Reviews, Settings, Issues */
+
+/* Agreement Specific Styles */
+.agreements-list {
+  padding: 1.5rem;
+}
+
+.agreement-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.agreement-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.agreement-details {
+  flex: 1;
+}
+
+.agreement-details h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.agreement-property {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.agreement-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.agreement-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.agreement-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Terms Grid */
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.term-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.term-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.term-content h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.term-content p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Payment Specific Styles */
+.rent-payment-card {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.rent-details {
+  text-align: center;
+}
+
+.rent-details h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.rent-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.due-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.due-date i {
+  margin-right: 0.5rem;
+}
+
+.payment-result {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.payment-result.success {
+  background-color: #d1fae5;
+  border: 1px solid #065f46;
+}
+
+.result-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.result-icon i {
+  color: var(--success-color);
+}
+
+.result-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.result-content p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Issue Tracking Styles */
+.recent-issues {
+  padding: 1.5rem;
+}
+
+.issue-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.issue-status {
+  flex-shrink: 0;
+}
+
+.issue-details {
+  flex: 1;
+}
+
+.issue-details h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.issue-details p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.issue-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.issue-priority {
+  flex-shrink: 0;
+}
+
+/* Reviews Styles */
+.reviews-list {
+  padding: 1.5rem;
+}
+
+.review-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.review-card.unreviewed {
+  border-left: 3px solid var(--warning-color);
+  background-color: rgba(245, 158, 11, 0.02);
+}
+
+.property-info {
+  flex: 1;
+}
+
+.property-info h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.property-location {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.rental-period {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: var(--warning-color);
+}
+
+.rating-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.review-text {
+  text-align: right;
+}
+
+.review-text p {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.review-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.review-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--border-color);
+  transition: color 0.2s;
+}
+
+.star-btn:hover,
+.star-btn.active {
+  color: var(--warning-color);
+}
+
+/* Feedback History */
+.feedback-history {
+  padding: 1.5rem;
+}
+
+.feedback-item {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.feedback-item:last-child {
+  margin-bottom: 0;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.feedback-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback-date {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.feedback-content p {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.feedback-status {
+  text-align: right;
+}
+
+/* Guidelines */
+.guidelines-content {
+  padding: 1.5rem;
+}
+
+.guideline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.guideline-item:last-child {
+  margin-bottom: 0;
+}
+
+.guideline-item i {
+  color: var(--success-color);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.guideline-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.guideline-item p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}

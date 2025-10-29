@@ -1,0 +1,452 @@
+/* Modals and Component Styles */
+
+/* Tab System */
+.tab-navigation {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0;
+}
+
+.tab-btn {
+  padding: 1rem 2rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: var(--primary-color);
+  background: rgba(69, 169, 234, 0.05);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background: white;
+  font-weight: 600;
+}
+
+/* Tab Content */
+.tab-content {
+  padding: 1.5rem;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-large {
+  max-width: 800px;
+  width: 90%;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+/* Status Badges - Good rounded pill styling */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.status-badge.pending,
+.status-badge.draft {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #f59e0b;
+}
+
+.status-badge.approved,
+.status-badge.active,
+.status-badge.sent {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #10b981;
+}
+
+.status-badge.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #ef4444;
+}
+
+.status-badge.inactive {
+  background-color: #f1f5f9;
+  color: #475569;
+  border-color: #64748b;
+}
+
+.status-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* FIXED Legacy Status Styles - Now match the rounded pill styling exactly */
+.status-approved {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important; /* Changed from 0.375rem to full rounded pill */
+  font-size: 0.75rem !important;
+  font-weight: 500 !important; /* Changed from 600 to 500 to match */
+  text-transform: uppercase !important; /* Changed from capitalize to uppercase */
+  border: 1px solid #10b981 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-approved:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.status-pending {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important; /* Changed from 0.375rem to full rounded pill */
+  font-size: 0.75rem !important;
+  font-weight: 500 !important; /* Changed from 600 to 500 to match */
+  text-transform: uppercase !important; /* Changed from capitalize to uppercase */
+  border: 1px solid #f59e0b !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-pending:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.status-rejected {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important; /* Changed from 0.375rem to full rounded pill */
+  font-size: 0.75rem !important;
+  font-weight: 500 !important; /* Changed from 600 to 500 to match */
+  text-transform: uppercase !important; /* Changed from capitalize to uppercase */
+  border: 1px solid #ef4444 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-rejected:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Add other legacy status classes for completeness */
+.status-draft {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  border: 1px solid #f59e0b !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-draft:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.status-active {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  border: 1px solid #10b981 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-active:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.status-inactive {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  border: 1px solid #64748b !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-inactive:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.status-sent {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  border: 1px solid #10b981 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-sent:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Category Badges */
+.category-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid;
+}
+
+.category-badge.rental {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #3b82f6;
+}
+
+.category-badge.security {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #f59e0b;
+}
+
+.category-badge.maintenance {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #10b981;
+}
+
+/* Type Badges */
+.type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid;
+}
+
+.type-badge.system {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #f59e0b;
+}
+
+.type-badge.payment {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #10b981;
+}
+
+.type-badge.general {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #3b82f6;
+}
+
+/* Document Type Badges */
+.document-type-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: 1px solid;
+}
+
+.document-type-badge.ownership {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #f59e0b;
+}
+
+.document-type-badge.lease {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #3b82f6;
+}
+
+.document-type-badge.inspection {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #10b981;
+}
+
+.document-type-badge.insurance {
+  background-color: #ede9fe;
+  color: #5b21b6;
+  border-color: #7c3aed;
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  z-index: 9999;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.notification-success {
+  background-color: #10b981;
+}
+
+.notification-warning {
+  background-color: #f59e0b;
+}
+
+.notification-error {
+  background-color: #ef4444;
+}

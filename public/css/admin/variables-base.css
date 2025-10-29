@@ -1,0 +1,58 @@
+/* Admin Dashboard Styles - Variables and Base */
+:root {
+  --primary-color: #45a9ea;
+  --primary-dark: #2563eb;
+  --secondary-color: #64748b;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --info-color: #06b6d4;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-color: #334155;
+  --text-muted: #64748b;
+  --sidebar-width: 280px;
+  --sidebar-collapsed: 80px;
+  --income-color: #10b981;
+  --expense-color: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Background utilities for stat icons */
+.bg-purple { 
+  background-color: #8b5cf6; 
+}
+
+.bg-blue {
+  background-color: #3b82f6;
+}
+
+.bg-orange {
+  background-color: #f59e0b;
+}
+
+.bg-green {
+  background-color: #10b981;
+}
+
+.bg-red {
+  background-color: #ef4444;
+}
+
+/* Hidden utility class */
+.hidden {
+  display: none !important;
+}

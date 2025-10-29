@@ -1,0 +1,13 @@
+/* Tenant Dashboard Styles - Main Import File */
+
+/* Import all tenant-specific CSS modules in correct order */
+@import url('variables-base.css');        /* 1. Variables and base styles */
+@import url('layout-sidebar.css');        /* 2. Layout and sidebar */
+@import url('header-dashboard.css');      /* 3. Header and dashboard */
+@import url('components-forms.css');      /* 4. Components and forms */
+@import url('tables-buttons.css');        /* 5. Tables and buttons */
+@import url('pages-components.css');      /* 6. Page-specific components */
+@import url('notifications-modals.css');  /* 7. Notifications and modals */
+@import url('specific-pages.css');        /* 8. Specific page styles */
+@import url('settings-preferences.css');  /* 9. Settings and preferences */
+@import url('responsive.css');            /* 10. Responsive styles */

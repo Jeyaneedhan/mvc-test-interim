@@ -1,0 +1,313 @@
+/* Manager Tables and Forms Styles */
+/* ============================================
+   TABLE STYLES
+   ============================================ */
+
+.table-container {
+  width: 100%; /* Ensure the container spans the full width */
+  max-width: 100%;
+  width: 87vw;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  table-layout: auto;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+  word-wrap: break-word ;
+}
+
+.data-table th {
+  background-color: var(--light-color);
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--light-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Property Thumbnail */
+.property-thumb {
+  width: 50px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(69, 169, 234, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* ============================================
+   SEARCH AND FILTER STYLES
+   ============================================ */
+
+/* Search and Filters */
+.search-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background: white;
+  cursor: pointer;
+}
+
+/* ============================================
+   STATUS BADGES
+   ============================================ */
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.approved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Priority Badges */
+.priority-badge {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.priority-badge.high {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+.priority-badge.medium {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.priority-badge.low {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+}
+
+/* ============================================
+   TAB STYLES
+   ============================================ */
+
+.tabs-container {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.tabs-nav {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+  background: white;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-button:hover {
+  color: var(--text-color);
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ============================================
+   PROPERTY SPECIFIC STYLES
+   ============================================ */
+/* ---------------------------------------------- Fix ---------------------- */
+.properties-content,
+.tenants-content,
+.maintenance-content,
+.inspections-content,
+.issues-content,
+.providers-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+}
+.leases-content{
+  width: 100%; /* Full width */
+  max-width: 100%; /* Remove any width restrictions */
+  padding: 0; /* Remove extra padding */
+}
+/* Property Actions */
+.property-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.property-actions-pending {
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 30px;
+}
+
+.btn-approve {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-approve:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+.btn-reject {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-reject:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}

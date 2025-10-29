@@ -1,0 +1,28 @@
+/* If CSS didn't apply try Ctrl+F5 / Command + Shift + R clear cache and then reload the browser again*/
+
+/* CSS LIBRARY */
+
+
+/* COMPONENTS */
+@import url('components/topnavbar_styles.css'); 
+@import url('components/form_styles.css'); 
+@import url('components/button_styles.css'); 
+@import url('components/flash_message_styles.css'); 
+
+/* POSTS */
+@import url('posts/posts_styles.css'); 
+
+/* FONTS */
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('fonts/poppins/Poppins-Regular.ttf');
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins-Regular';
+    font-size: small;
+    background-color: var(--main-background-color);
+    text-align: left;
+}

@@ -1,0 +1,471 @@
+/* Buttons and Action Styles - Complete Consistency Update */
+
+/* Base Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  min-height: 36px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+}
+
+/* Button Outline Variant */
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--light-color);
+  border-color: var(--text-muted);
+  color: var(--text-color);
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  min-height: 30px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Enhanced hover and focus states */
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =============================================
+   UNIVERSAL ACTION BUTTON SYSTEM
+   ============================================= */
+
+/* Universal Action Button Base Style - Consistent across ALL admin sections */
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-size: 0.875rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+/* =============================================
+   ACTION BUTTON VARIANTS - CONSISTENT THEMING
+   ============================================= */
+
+/* View Button - Secondary/Gray Theme */
+.view-btn {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.view-btn:hover {
+  background: #64748b;
+  color: white;
+  border-color: #64748b;
+}
+
+/* Edit Button - Blue Theme */
+.edit-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+/* Status/Toggle Button - Orange Theme */
+.status-btn {
+  background: #fff3e0;
+  color: #f57c00;
+  border: 1px solid #ffcc02;
+}
+
+.status-btn:hover {
+  background: #f57c00;
+  color: white;
+  border-color: #f57c00;
+}
+
+/* Success/Approve/Activate Button - Green Theme */
+.approve-btn,
+.activate-btn {
+  background: #e8f5e8;
+  color: #388e3c;
+  border: 1px solid #c8e6c9;
+}
+
+.approve-btn:hover,
+.activate-btn:hover {
+  background: #388e3c;
+  color: white;
+  border-color: #388e3c;
+}
+
+/* Warning/Reject/Deactivate Button - Red Theme */
+.reject-btn,
+.deactivate-btn {
+  background: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.reject-btn:hover,
+.deactivate-btn:hover {
+  background: #d32f2f;
+  color: white;
+  border-color: #d32f2f;
+}
+
+/* Danger/Delete/Remove Button - Dark Red Theme */
+.danger-btn {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.danger-btn:hover {
+  background: #c62828;
+  color: white;
+  border-color: #c62828;
+}
+
+/* Download Button - Info/Cyan Theme */
+.download-btn {
+  background: #e1f5fe;
+  color: #0288d1;
+  border: 1px solid #b3e5fc;
+}
+
+.download-btn:hover {
+  background: #0288d1;
+  color: white;
+  border-color: #0288d1;
+}
+
+/* Send Button - Primary Theme */
+.send-btn {
+  background: rgba(69, 169, 234, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(69, 169, 234, 0.3);
+}
+
+.send-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* =============================================
+   ACTION BUTTON CONTAINERS - UNIVERSAL
+   ============================================= */
+
+/* Universal containers for all admin sections */
+.action-buttons,
+.provider-actions,
+.property-actions,
+.manager-actions,
+.document-actions,
+.policy-actions,
+.notification-actions,
+.transaction-actions,
+.tenant-actions,
+.inspection-actions,
+.maintenance-actions,
+.lease-actions {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Special handling for pending states */
+.property-actions-pending,
+.manager-actions-pending,
+.document-actions-pending,
+.policy-actions-pending {
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+/* =============================================
+   LEGACY BUTTON SUPPORT - BACKWARD COMPATIBILITY
+   ============================================= */
+
+/* Legacy button action support - for gradual migration */
+.btn-action {
+  background: none;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 30px;
+}
+
+.btn-approve {
+  background-color: var(--success-color);
+  color: white;
+  border: 1px solid var(--success-color);
+}
+
+.btn-approve:hover {
+  background-color: #059669;
+  border-color: #059669;
+  transform: scale(1.05);
+}
+
+.btn-reject {
+  background-color: var(--danger-color);
+  color: white;
+  border: 1px solid var(--danger-color);
+}
+
+.btn-reject:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* =============================================
+   BUTTON STATES AND ACCESSIBILITY
+   ============================================= */
+
+/* Disabled state for all action buttons */
+.action-btn:disabled,
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.action-btn:disabled:hover,
+.btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Focus states for accessibility */
+.action-btn:focus,
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Loading state for action buttons */
+.action-btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.action-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+
+@media (max-width: 1024px) {
+  .action-buttons,
+  .provider-actions,
+  .property-actions,
+  .manager-actions,
+  .document-actions,
+  .policy-actions,
+  .notification-actions,
+  .transaction-actions,
+  .tenant-actions,
+  .inspection-actions,
+  .maintenance-actions,
+  .lease-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+  
+  .btn-action {
+    min-width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .action-buttons,
+  .provider-actions,
+  .property-actions,
+  .manager-actions,
+  .document-actions,
+  .policy-actions,
+  .notification-actions,
+  .transaction-actions,
+  .tenant-actions,
+  .inspection-actions,
+  .maintenance-actions,
+  .lease-actions {
+    gap: 0.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .action-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
+  }
+  
+  .btn-action {
+    min-width: 24px;
+    height: 24px;
+    font-size: 0.65rem;
+    padding: 0.125rem 0.25rem;
+  }
+}
+
+/* =============================================
+   PRINT STYLES
+   ============================================= */
+
+@media print {
+  .action-buttons,
+  .provider-actions,
+  .property-actions,
+  .manager-actions,
+  .document-actions,
+  .policy-actions,
+  .notification-actions,
+  .transaction-actions,
+  .tenant-actions,
+  .inspection-actions,
+  .maintenance-actions,
+  .lease-actions,
+  .btn,
+  .action-btn {
+    display: none !important;
+  }
+}

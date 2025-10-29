@@ -1,0 +1,213 @@
+/* MAIN LAYOUT */
+.landlord-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR STYLES */
+.sidebar {
+  width: var(--sidebar-width);
+  background: white;
+  border-right: 1px solid var(--border-color);
+  transition: width 0.3s ease;
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+  width: var(--sidebar-collapsed);
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: padding 0.3s ease;
+  position: relative;
+}
+
+.sidebar.collapsed .sidebar-header {
+  padding: 1.5rem 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logo i {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  transition: opacity 0.3s ease, width 0.3s ease;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .logo-text {
+  opacity: 0;
+  width: 0;
+  display: none;
+}
+
+/* Toggle Button - ALWAYS VISIBLE */
+.sidebar-toggle {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  margin-right: 30px;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  flex-shrink: 0;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar-toggle:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.sidebar-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-toggle i {
+  transform: rotate(180deg);
+}
+
+/* Navigation - FIXED ACTIVE STYLES */
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0.25rem 0;
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+  position: relative;
+  white-space: nowrap;
+}
+
+.sidebar.collapsed .nav-link {
+  padding: 0.75rem;
+  justify-content: center;
+}
+
+/* IMPORTANT: Active state must come AFTER hover to have higher specificity */
+.nav-link:hover {
+  background-color: var(--light-gray);
+  color: var(--text-primary);
+  border-left-color: var(--primary-color);
+}
+
+/* Active state with higher specificity */
+.nav-link.active,
+.nav-link.active:hover {
+  background-color: rgba(69, 169, 234, 0.1) !important;
+  color: var(--primary-color) !important;
+  border-left-color: var(--primary-color) !important;
+}
+
+.nav-link i {
+  width: 1.25rem;
+  text-align: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.nav-text {
+  transition: opacity 0.3s ease, width 0.3s ease;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .nav-text {
+  opacity: 0;
+  width: 0;
+  display: none;
+}
+
+/* Tooltip for collapsed sidebar */
+.sidebar.collapsed .nav-item:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text-primary);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  z-index: 1002;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  pointer-events: none;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right-color: var(--text-primary);
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: var(--sidebar-collapsed);
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  padding: 2rem;
+}

@@ -1,0 +1,81 @@
+.form-btn {
+    background-color: rgb(59, 110, 36);
+    color: aliceblue;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: .2s all;
+}
+
+.form-btn:hover {
+    background-color: rgb(34, 75, 15);
+    border-radius: 5px;
+}
+
+.post-btn {
+    background-color: rgb(36, 105, 110);
+    color: aliceblue;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: .2s all;
+}
+
+.post-btn:hover {
+    background-color: rgb(15, 51, 75);
+    border-radius: 5px;
+}
+
+.post-create-btn {
+    background-color: rgb(14, 171, 37);
+    color: aliceblue;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    transition: .2s all;
+}
+
+.post-create-btn:hover {
+    background-color: rgb(25, 122, 3);
+}
+
+.post-control-btn1 {
+    background-color: rgb(36, 105, 110);
+    color: aliceblue;
+    margin-left: 10px;
+    padding: 5px 19px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 11px;
+    transition: 0.2s all;
+    margin-left: 5px;
+}
+
+.post-control-btn1:hover {
+    background-color: rgb(15, 51, 75);
+    border-radius: 5px;
+}
+
+.post-control-btn2 {
+    background-color: rgb(196, 2, 2);
+    color: aliceblue;
+    margin-left: 10px;
+    padding: 5px 19px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 11px;
+    transition: 0.2s all;
+}
+
+.post-control-btn2:hover {
+    background-color: rgb(138, 18, 2);
+    border-radius: 5px;
+}

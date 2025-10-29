@@ -1,0 +1,310 @@
+/* Buttons and Action Styles */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  min-height: 36px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  min-height: 30px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Enhanced hover and focus states */
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  min-width: 32px;
+}
+
+.view-btn {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #475569;
+  transform: translateY(-1px);
+}
+
+.download-btn {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #475569;
+  transform: scale(1.05);
+}
+
+.approve-btn {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+.reject-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.reject-btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+.activate-btn {
+  background-color: var(--success-color);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.activate-btn:hover {
+  background-color: #059669;
+}
+
+.deactivate-btn {
+  background-color: var(--warning-color);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.deactivate-btn:hover {
+  background-color: #d97706;
+}
+
+.send-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.send-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.danger-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.danger-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Document Actions */
+.document-actions {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.document-actions .action-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.manager-actions-pending {
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* Properties Actions */
+.property-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.property-actions-pending {
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 30px;
+}
+
+.btn-approve {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-approve:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+}
+
+.btn-reject {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-reject:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+/* Provider, Policy, Notification Actions */
+.provider-actions,
+.policy-actions,
+.notification-actions {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Transaction Actions */
+.transaction-actions {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.transaction-actions .action-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}

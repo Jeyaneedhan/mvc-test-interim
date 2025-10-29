@@ -1,0 +1,743 @@
+/* Responsive and Component-Specific Styles */
+
+/* Manager-specific Styles */
+.managers-content {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+/* Assignment Section Styles */
+.assignments-content {
+  background: white;
+}
+
+.assignments-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.assignments-table {
+  width: 100%;
+}
+
+/* Documents Management Specific Styles */
+.documents-content {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+/* Document Info Styling */
+.document-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.document-icon {
+  font-size: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.pdf-icon {
+  color: #dc2626;
+}
+
+.contract-icon {
+  color: #3b82f6;
+}
+
+.inspection-icon {
+  color: #059669;
+}
+
+.insurance-icon {
+  color: #7c3aed;
+}
+
+.document-name {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Owner Info Styling */
+.owner-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-name {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Financial Management Specific Styles */
+.transaction-type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.type-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.type-icon.income {
+  background-color: var(--income-color);
+}
+
+.type-icon.payment,
+.type-icon.expense {
+  background-color: var(--expense-color);
+}
+
+.type-label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.transaction-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-title {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.description-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.property-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-name {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.property-address {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.amount-display {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.amount-display.income {
+  color: var(--income-color);
+}
+
+.amount-display.payment,
+.amount-display.expense {
+  color: var(--expense-color);
+}
+
+/* Transaction Modal Styles */
+.transaction-details {
+  padding: 1rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.detail-item span {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.amount-large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.detail-notes {
+  margin-bottom: 2rem;
+}
+
+.detail-notes label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.detail-notes p {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Provider Specific Styles */
+.provider-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.provider-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.provider-details {
+  flex: 1;
+}
+
+.provider-name {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.provider-description {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating-display i {
+  color: var(--warning-color);
+  font-size: 0.875rem;
+}
+
+.rating-display span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Policy Specific Styles */
+.policy-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.policy-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.policy-details {
+  flex: 1;
+}
+
+.policy-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.policy-description {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Notification Specific Styles */
+.notification-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: white;
+}
+
+.notification-icon.system {
+  background-color: var(--warning-color);
+}
+
+.notification-icon.payment {
+  background-color: var(--success-color);
+}
+
+.notification-icon.general {
+  background-color: var(--info-color);
+}
+
+.notification-details {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.notification-preview {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Pagination */
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: between;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--light-color);
+}
+
+.pagination-info {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.page-btn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-color);
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: var(--light-color);
+}
+
+.page-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .search-filter-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input-wrapper,
+  .filter-dropdown-wrapper {
+    min-width: auto;
+  }
+
+  .property-actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .property-actions-pending {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-action {
+    min-width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+
+  .search-filter-row {
+    flex-direction: column;
+  }
+
+  .filter-container {
+    min-width: auto;
+  }
+
+  .document-actions {
+    justify-content: center;
+  }
+
+  .document-actions .action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .documents-table {
+    font-size: 0.75rem;
+  }
+
+  .documents-table th,
+  .documents-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .document-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .property-info,
+  .owner-info {
+    text-align: center;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-actions {
+    justify-content: center;
+  }
+
+  .provider-actions,
+  .policy-actions,
+  .notification-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .provider-info,
+  .policy-info,
+  .notification-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .tab-navigation {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    border-radius: 0.375rem;
+    margin-bottom: 0.25rem;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .tab-btn.active {
+    border-left-color: var(--primary-color);
+    border-bottom-color: transparent;
+  }
+
+  .managers-table,
+  .documents-table,
+  .data-table,
+  .transactions-table,
+  .policies-table,
+  .providers-table,
+  .notifications-table {
+    font-size: 0.75rem;
+  }
+
+  .managers-table th,
+  .managers-table td,
+  .documents-table th,
+  .documents-table td,
+  .data-table th,
+  .data-table td,
+  .transactions-table th,
+  .transactions-table td,
+  .policies-table th,
+  .policies-table td,
+  .providers-table th,
+  .providers-table td,
+  .notifications-table th,
+  .notifications-table td {
+    padding: 0.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .manager-actions-pending {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+
+  .search-filter-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .documents-table {
+    font-size: 0.7rem;
+  }
+
+  .documents-table th,
+  .documents-table td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .document-actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .document-actions .action-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .document-type-badge {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.5rem;
+  }
+
+  .modal-content {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .transaction-type {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.25rem;
+  }
+
+  .type-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .transaction-description {
+    text-align: center;
+  }
+
+  .property-info {
+    text-align: center;
+  }
+
+  .transaction-actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .transaction-actions .action-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .amount-display {
+    font-size: 0.875rem;
+  }
+
+  .provider-actions,
+  .policy-actions,
+  .notification-actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .provider-actions .action-btn,
+  .policy-actions .action-btn,
+  .notification-actions .action-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .provider-info,
+  .policy-info,
+  .notification-info {
+    gap: 0.5rem;
+  }
+
+  .provider-description,
+  .policy-description,
+  .notification-preview {
+    font-size: 0.7rem;
+  }
+
+  .category-badge,
+  .type-badge {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.5rem;
+  }
+
+  .pagination-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .pagination-info {
+    order: 2;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .sidebar,
+  .main-header,
+  .action-buttons,
+  .header-actions,
+  .document-actions,
+  .transaction-actions,
+  .provider-actions,
+  .policy-actions,
+  .notification-actions {
+    display: none !important;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .page-content {
+    max-width: none;
+  }
+  
+  .tab-navigation {
+    display: none;
+  }
+  
+  .tab-content {
+    display: block !important;
+  }
+
+  .documents-table,
+  .transactions-table,
+  .policies-table,
+  .providers-table,
+  .notifications-table {
+    font-size: 0.75rem;
+  }
+
+  .documents-table th,
+  .documents-table td,
+  .transactions-table th,
+  .transactions-table td,
+  .policies-table th,
+  .policies-table td,
+  .providers-table th,
+  .providers-table td,
+  .notifications-table th,
+  .notifications-table td {
+    padding: 0.5rem;
+  }
+}

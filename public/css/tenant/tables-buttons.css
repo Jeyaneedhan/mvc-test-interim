@@ -1,0 +1,228 @@
+/* Tables and Buttons Styles */
+
+/* Table Section */
+.table-section {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: var(--light-color);
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--light-color);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  min-height: 36px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  min-height: 30px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-property-action {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-property-action:hover:not(.disabled) {
+  background-color: var(--primary-dark);
+}
+
+.btn-property-action.disabled {
+  background-color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.status-badge.available {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #065f46;
+}
+
+.status-badge.reserved {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #92400e;
+}
+
+.status-badge.booked {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #991b1b;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #92400e;
+}
+
+.status-badge.approved {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #065f46;
+}
+
+.status-badge.warning {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #92400e;
+}
+
+/* Priority Badges */
+.priority-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.priority-badge.low {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.priority-badge.medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.priority-badge.high {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.priority-badge.emergency {
+  background-color: #fca5a5;
+  color: #7f1d1d;
+}
+
+/* Feature Tags */
+.feature-tag {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Enhanced Button States */
+.btn.btn-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn.btn-success:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.btn:disabled,
+.btn.opacity-50 {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

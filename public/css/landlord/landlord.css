@@ -1,0 +1,13 @@
+/* Landlord CSS - Main Import File */
+/* ============================================
+   IMPORT ALL LANDLORD CSS FILES
+   ============================================ */
+
+/* Import all landlord-specific CSS modules in correct order */
+@import url('variables-base.css');          /* 1. Variables and base styles */
+@import url('layout-sidebar.css');          /* 2. Layout and sidebar */
+@import url('header-dashboard.css');        /* 3. Header and dashboard */
+@import url('tables-forms.css');            /* 4. Tables and forms */
+@import url('buttons-actions.css');         /* 5. Buttons and actions */
+@import url('modals-components.css');       /* 6. Modals and components */
+@import url('responsive-specific.css');     /* 7. Responsive and specific styles */
